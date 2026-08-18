@@ -1,0 +1,111 @@
+NAME
+    Blank - a skeleton Mojolicious website with some essential features
+    $VERSION
+
+SYNOPSIS
+    # how to deploy it and start using it
+
+DESCRIPTION
+    Blank is a blank skeleton Mojolicious website with common features such
+    as a configuration file, database migrations, multi-language, an account
+    system (with safe password storage, register form, email confirmation,
+    access recovery by email, a profile page), email sending and a test
+    suite.
+
+    The website is deployable with HTTPS and dev/test/prod environments.
+
+FEATURES
+  CONFIGURATION FILE
+    The configuration file is blank.conf. You can have different
+    configuration files for each environment (development, testing,
+    production) and make blank.conf a symbolic link to one of these files.
+    Tests use the TEST-blank.conf configuration file (to have a dedicated
+    test database).
+
+  EMAIL SENDING
+    Blank email sending is done via a third party email sending provider.
+    The code for sending emails should probably be adapted to your email
+    provider.
+
+  DATABASE
+    Mojo::Pg (and so Postgresql) is used for the database access. The
+    migrations are in the directory migrations, using a hierarchical
+    structure. A simple eval is used to catch Exceptions from query().
+
+  USER ACCOUNTS
+    There are two tables, one for users (with a uuid, a name, an email
+    address and a password) and one for accounts (with an account name and a
+    color). For now, one user has only one account but that may change. The
+    user may have a name, an email or both.
+
+  PASSWORD
+    Password secure storage is done using Argon2id. The parameters have been
+    chosen using the utility argon2calibrate provided by Crypt::Argon2 (see
+    SECURITY file for more information).
+
+  INTERNATIONALIZATION
+    All texts to be read by end users is between l('') using
+    Mojolicious::Plugin::I18N and Blank::I18N::* for translation files.
+
+  EMAIL MANAGEMENT
+    Email texts are stored in templates. The text in the template can be
+    automatically translated the same way that web pages are.
+
+  EMAIL ADDRESS VERIFICATION
+    Mojo::JWT is used to create a JWT to let the user verify his email
+    address. The secret comes from the configuration file.
+
+  PUBLIC PROFILE PAGE
+    WARNING: this feature may expose the name of your users, if you don't
+    want that feature at all, you must at least remove the corresponding
+    routes under /profiles/.
+
+    In order to demonstrate differentiated access, each user has a public
+    profile page that shows his name (unless the name corresponds to the
+    user email address) and a description text provided by the user. This
+    page can be accessed by anyone.
+
+  SUBSCRIPTION
+    As a foundation for user subscription management, there is a database
+    table for payments made by users in favor of the website and a
+    subscription status field for users.
+
+  ENCODING
+    UTF-8 is considered the default encoding.
+
+  TIME ZONE
+    UTC is set as the time zone in the first database migration.
+
+  FORM VALIDATION
+    Forms are validated using Mojolicious::Validator (including its CSRF
+    protection), with a custom helper for redirection and showing specific
+    validation errors to the end user.
+
+  WHAT IS NOT IN THIS WEBSITE
+    No job queue (such as Minion) has been integrated yet.
+
+    No database backup facility is offered yet.
+
+    No ORM is used. The Model uses SQL queries directly.
+
+    There is no admin account (admin tasks can be done directly with a Mojo
+    eval or in the database).
+
+    There is no frontend framework.
+
+HOW TO USE
+    *   Clone the project. You may want to follow the original Blank project
+        for updates.
+
+    *   Rename all Blank/blank to your new project's name (including 'blanc'
+        in the French translation).
+
+    *   Create a database with the new name and run the migrations (for the
+        account management tables etc).
+
+    *   Adapt the Email sending module if necessary (and the configuration
+        file).
+
+    *   Copy a configuration file from the blank.conf.sample (you can remove
+        this sample file). Don't forget to generate new secrets.
+

@@ -1,0 +1,21 @@
+# Password storage
+#
+Password secure storage is done using Argon2id. The parameters have been chosen using the utility
+argon2calibrate provided by Crypt::Argon2 (see SECURITY file for more information).
+What type of hash? [argon2id]
+How many threads may it use [1]
+How much memory may it use (e.g. 32M) 20M
+How much time may argon2 take? (in milliseconds) 100
+type = argon2id
+threads = 1
+mem_cost = 20M
+time_cost = 48
+
+The salt size is 16 bytes (recommended by RFC9106).
+
+# Email API
+
+Set an expiration date for the API tokens, 3 months.
+
+# Secrets
+Watch out for the secrets for Mojolicious and for JWT.

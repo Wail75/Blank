@@ -1,0 +1,30 @@
+# this is a basic Makefile with some commands that I often use. Feel free to adapt it or discard it.
+project = # your project name (replaces 'blank')
+# Perl module from which the README file is extracted
+mainlib = # module file name
+
+run:
+	carton exec morbo script/$(project).pl
+
+test:
+	carton exec prove -lr
+
+install:
+	carton install
+
+db:
+	su -l - devpg -c "psql $(project)"
+
+migrate:
+	carton exec "./script/$(project).pl eval 'app->pg->migrations->migrate()'"
+
+perldirs = script/ lib/ t/ utils/
+
+perltidy:
+	find $(perldirs) \( -name *.p[lm] -o -name *.t \) -exec perltidy -b -bext='/' '{}' \;
+
+perltidy-clean:
+	find $(perldirs) -name *.bak -delete
+
+readme:
+	pod2text lib/$(mainlib) > README

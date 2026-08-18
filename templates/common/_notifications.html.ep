@@ -1,0 +1,7 @@
+% if (my $msg = flash('error') || stash('error')) {
+    <p style="color: red"><b id="notif-error"><%= l($msg) %></b></p>
+% }
+
+% if (my $msg = flash('message') || stash('message')) {
+    <p style="color: green"><b id="notif-ok"><%= l($msg) %></b></p>
+% }
