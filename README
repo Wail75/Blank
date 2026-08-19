@@ -1,6 +1,5 @@
 NAME
     Blank - a skeleton Mojolicious website with some essential features
-    $VERSION
 
 SYNOPSIS
     # how to deploy it and start using it
