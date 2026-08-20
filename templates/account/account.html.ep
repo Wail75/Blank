@@ -1,11 +1,11 @@
 % layout 'default';
 % title l('User Account');
 
-%= include 'common/_notifications'
-
 %= include 'common/_connected_top_bar'
 
 <h1><%=l('Account Management')%></h1>
+
+%= include 'common/_notifications'
 
 <div id="name-control">
 % if ( $email && $name && $name eq $email ) {

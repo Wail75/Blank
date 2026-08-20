@@ -1,8 +1,8 @@
 % layout 'default';
 % title l('Dashboard');
 
-%= include 'common/_notifications'
-
 %= include 'common/_connected_top_bar'
 
 <h1><%=l('Dashboard')%></h1>
+
+%= include 'common/_notifications'
