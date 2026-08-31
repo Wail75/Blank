@@ -1,4 +1,7 @@
 
+0.92  2026-08-31
+  - added HTTP security headers
+
 0.91  2026-08-21
   - moved the connected top bar to the top for consistency; adapted a test
   - created a dedicated css dir

@@ -13,7 +13,7 @@ use Mail::RFC822::Address;
 use Blank::Model::Emailer;
 use Blank::Model::Accounts;
 
-our $VERSION = '0.91';
+our $VERSION = '0.92';
 
 
 =head1 NAME
