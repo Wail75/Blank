@@ -56,6 +56,8 @@ There are two tables, one for users (with a uuid, a name, an email address and a
 for accounts (with an account name and a color). For now, one user has only one account but that may
 change. The user may have a name, an email or both.
 
+A user can delete his entire user account, after receiving a warning.
+
 =head2 PASSWORD
 
 Password secure storage is done using Argon2id. The parameters have been chosen using the utility
@@ -322,6 +324,9 @@ sub startup {
   # ask to change the user email, it does not immediately change but it sends a confirmation email
   $account->post('/email')->to(action => 'ask_email_change')->name('ask_email_change');
   $account->post('/password')->to(action => 'modify_user_password')->name('modify_user_password');
+
+  # delete user account
+  $account->post('/delete-user')->to('account#delete_user')->name('delete_user');
 
   # public profiles
   $logged_in->post('/profiles')->to('account#modify_profile')->name('modify_profile');
