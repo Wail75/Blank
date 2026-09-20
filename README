@@ -37,6 +37,8 @@ FEATURES
     color). For now, one user has only one account but that may change. The
     user may have a name, an email or both.
 
+    A user can delete his entire user account, after receiving a warning.
+
   PASSWORD
     Password secure storage is done using Argon2id. The parameters have been
     chosen using the utility argon2calibrate provided by Crypt::Argon2 (see

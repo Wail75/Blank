@@ -5,3 +5,8 @@
 .valid {
     color: green
 }
+
+.radical {
+    font-weight: bold;
+    background-color: red
+}
