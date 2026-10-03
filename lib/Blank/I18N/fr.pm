@@ -100,7 +100,7 @@ our %Lexicon = (
   'Check your email inbox and your spams.'  => "Vérifiez votre boîte email et vos spams.",
   'Once you have the verification email, click the link inside it to verify your email address.' =>
     "Une fois que vous avez reçu l'email de vérification, cliquez sur le lien qu'il contient pour confirmer votre adresse email.",
-  'To send the verification email again, click on this link' =>
+  'To send the verification email again, click on this link.' =>
     "Pour recevoir à nouveau l'email de vérification, cliquez sur ce lien.",
   'The email verification link is incorrect.'          => "Le lien pour vérifier l'adresse email n'est pas correct.",
   'Your email address has been successfully verified.' => "Votre adresse email a bien été confirmée.",
@@ -110,6 +110,7 @@ our %Lexicon = (
     "Vous n'avez pas donné de nom pour votre compte, nous utilisons donc votre adresse email.",
   'You can change your account name here: '               => "Vous pouvez changer votre nom ici : ",
   'You can give a new account name here: '                => "Vous pouvez changer votre nom ici : ",
+  'New name'                                              => "Nouveau nom",
   'Save the new name'                                     => 'Enregistrer le nouveau nom',
   'You must give the current name.'                       => "Vous devez donner le nom actuel.",
   'You must give a new name.'                             => "Vous devez donner un nouveau nom.",
@@ -123,6 +124,7 @@ our %Lexicon = (
 
   'You can change your account email here: '                     => "Vous pouvez changer votre email ici : ",
   'You can give a new account email here: '                      => "Vous pouvez changer votre email ici : ",
+  'New email'                                                    => "Nouvelle addresse email",
   'Save the new email'                                           => 'Enregistrer la nouvelle adresse email',
   'We have sent you an email to confirm your new email address.' =>
     "Nous vous avons envoyé un email pour confirmer votre nouvelle adresse email.",
@@ -137,8 +139,10 @@ our %Lexicon = (
   'Your password has been changed.'    => "Votre mot de passe a été changé.",
   'Password change failed.'            => "Le changement de mot de passe a échoué.",
   'You can give a new password here: ' => "Vous pouvez donner un nouveau mot de passe ici : ",
-  'Repeat the new password here: '     => "Répétez le nouveau mot de passe ici : ",
-  'Give your current password: '       => "Donnez votre mot de passe actuel : ",
+  'New password'                       => "Nouveau mot de passe",
+  'New password, repeat'               => "Nouveau mot de passe, répétez",
+  'Current password'                   => "Mot de passe actuel",
+  'You can give a new password here: ' => "Vous pouvez donner un nouveau mot de passe ici : ",
   'Save the new password'              => "Enregistrer le nouveau mot de passe.",
 
   'Recover your password'   => "Récupérez votre mot de passe",
