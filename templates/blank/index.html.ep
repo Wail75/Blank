@@ -35,7 +35,6 @@
       <%=l "However, without an email address, you won't be able to recover your account if you forget your password." %></td>
       <%=l 'If you give an email address but no name, you will be able to login with your email address.' %></td>
   </p>
-  <p><%=l "Password must be between $V::V_MIN_PWD and $V::V_MAX_PWD characters long." %> <%=l 'Password must contain at least one letter and one digit.' %></p>
   <table>
   % my $registration_errors = flash('registration_errors') || {};
   %= form_for register => begin
@@ -70,7 +69,7 @@
   % }
       </td>
   </tr>
-  <tr><td><%=l 'Password' %></td>
+  <tr><td><%=l("Password, between $V::V_MIN_PWD and $V::V_MAX_PWD characters long, at least one letter and one digit") %></td>
       <td><%= password_field 'pwd1' %>
   % if ( my $e = $registration_errors->{'pwd1'} ) {
           <p id="error-pwd1" class="error">

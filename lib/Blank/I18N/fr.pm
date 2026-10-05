@@ -61,6 +61,8 @@ our %Lexicon = (
   'Register'                                       => "Inscription",
   'Name'                                           => "Nom d'utilisateur",
   'Password'                                       => "Mot de passe",
+  "Password, between $V::V_MIN_PWD and $V::V_MAX_PWD characters long, at least one letter and one digit" =>
+    "Mot de passe, entre $V::V_MIN_PWD et $V::V_MAX_PWD caractères de long, au moins une lettre et un chiffre",
   'Email'                                          => "Adresse email",
   'Repeat password'                                => "Répéter le mot de passe",
   'OR'                                             => "OU",
