@@ -22,3 +22,9 @@ textarea {
     font-weight: bold;
     background-color: red
 }
+
+.no-autoedit {
+  autocorrect: off;
+  autocapitalize: off;
+  autocomplete: off
+}
