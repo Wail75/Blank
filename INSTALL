@@ -14,7 +14,7 @@ sudo apt install postgresql postgresql-client postgresql-server-dev-all
 adduser devpg
 su - postgres / sudo -i -u postgres
 createuser --pwprompt devpg
-createdb -O devpg blank
+createdb -O devpg -E UTF8 blank
 # DON'T FORGET to run the migrations later (see below)
 
 carton install
