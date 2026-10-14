@@ -1,3 +1,16 @@
+0.93  2026-10-14
+  - use an SQL standard function
+  - add a button for deleting user account
+  - add a bit more doc on release
+  - better doc and logs
+  - better account page UI (although that is made with a frontend framwork in mind)
+  - in Register page, move the password syntax rules close to the password field
+  - quick fix for a problem with Safari autozooming input text
+  - improvements and corrections to the Index page UI
+  - minor perltidy corrections
+  - mention the encoding when creating a database
+  - prevent auto editing by browsers
+  - fix emails texts, adding translation
 
 0.92  2026-08-31
   - added HTTP security headers
