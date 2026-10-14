@@ -6,7 +6,7 @@ use V;
 
 our %Lexicon = (
   'Blank website!'            => 'Site Web en Blanc',
-  'Hello from Blank Website.' => "Bonjour, du site web en Blanc,",
+  'Hello from Blank Website,' => "Bonjour, du site web en Blanc,",
   'The Blank Website team'    => "L'équipe du site web en Blanc",
   'Blank Website'             => "Site Web en Blanc",
 
@@ -149,6 +149,11 @@ our %Lexicon = (
 
   'Recover your password'   => "Récupérez votre mot de passe",
   'Recover password failed' => "La récupérationd du mot de passse a échoué.",
+
+  'You have just registered an account for this email address.' =>
+    "Vous venez de créer un compte utilisateur avec cette adresse email.",
+  'If you have not tried to register to the Blank Website, please tell us.' =>
+    "Si vous n'avez pas essayé de vous inscrire au site web en Blanc, merci de nous en avertir.",
 
   'You have just asked to change your account email address.' =>
     "Vous venez de demander de changer l'adresse email de votre compte.",

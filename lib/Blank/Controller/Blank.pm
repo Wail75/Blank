@@ -4,7 +4,7 @@ use Mojo::Base 'Mojolicious::Controller';
 
 sub log_context {
   my ($c, $method_name) = @_;
-  return $c->app->log->context('[ControllerProfweb]', "[$method_name]");
+  return $c->app->log->context('[ControllerBlank]', "[$method_name]");
 }
 
 sub index {
