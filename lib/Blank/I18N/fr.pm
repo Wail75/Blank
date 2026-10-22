@@ -49,7 +49,7 @@ our %Lexicon = (
   'The password reset link is incorrect.' => "Le lien pour redéfinir le mot de passe n'est pas correct.",
   'Reset Password'                        => "Redéfinir le mot de passe",
   'You are already logged in as'          => "Vous êtes déjà connecté",
-  "You can register with a name only if you don't to give an email address." =>
+  "You can register with a name only if you don't want to give an email address." =>
     "Vous pouvez vous inscrire avec seulement un nom d'utilisateur si vous ne voulez pas donner d'adresse email.",
   "However, without an email address, you won't be able to recover your account if you forget your password." =>
     "Cependant, si vous ne donnez pas d'adresse email, nous ne serons pas capable de récupérer votre compte utilisateur si vous perdez votre mot de passe.",

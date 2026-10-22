@@ -35,7 +35,7 @@
         <h2><%=l 'Register' %></h2>
 
         <p>
-            <%=l "You can register with a name only if you don't to give an email address." %>
+            <%=l "You can register with a name only if you don't want to give an email address." %>
             <%=l "However, without an email address, you won't be able to recover your account if you forget your password." %>
             <%=l 'If you give an email address but no name, you will be able to login with your email address.' %>
         </p>
